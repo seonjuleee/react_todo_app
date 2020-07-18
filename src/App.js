@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import Header from './components/Header';
+import Contents from './components/Contents';
+import styles from './App.css'
 
 function App() {
+  const [todos, setTodos] = useState([]);
+
+  // Add 버튼 클릭 핸들러
+  const handleCreate = text => {
+    setTodos([
+      ...todos,
+      {
+        id: Date.now(),
+        text,
+        completed: false
+      }
+    ]);
+  };
+
+  // delete 버튼 클릭 핸들러
+  const handleDelete = id => {
+    setTodos(todos.filter(todo => todo.id !== id));
+  }
+
+  // completed Toggle 클릭 핸들러
+  const handleToggle = id => {
+    setTodos(
+      todos.map(todo =>
+          todo.id === id ? {...todo, completed: !todo.completed} : todo
+      )
+    )
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header onChange={handleCreate}/>
+      <Contents todos={todos} 
+      onDelete={handleDelete}
+      onToggle={handleToggle}
+      />
     </div>
-  );
+    )
 }
 
 export default App;
