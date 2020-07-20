@@ -1,6 +1,7 @@
 body {
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -80%);
+    transform: translate(-50%, 0);
+    background-color: #F4F6F6;
+    color: #34495E;
 }

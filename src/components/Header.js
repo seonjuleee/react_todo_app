@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import styled from 'styled-components'
+import './Header.css'
 
 // input
 function Header({onChange}) {
@@ -15,9 +15,11 @@ function Header({onChange}) {
     }
 
     return <div className="todoHeader">
-        <h1 className="headerTitle">TODO APP</h1>
-        <input className="headerInput" onChange={handleChange} value={text}/>
-        <button className="headerAdd" onClick={handleClick}>+</button>
+        <h1 className="headerTitle">TODOS</h1>
+        <div className="headerCreate">
+            <input className="headerInput" onChange={handleChange} value={text}/>
+            <button className="headerAdd" onClick={handleClick}>+</button>
+        </div>
     </div>
 }
 
