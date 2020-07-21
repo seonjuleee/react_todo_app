@@ -14,11 +14,11 @@ function Header({onChange}) {
         setText("");
     }
 
-    return <div className="todoHeader">
-        <h1 className="headerTitle">TODOS</h1>
-        <div className="headerCreate">
-            <input className="headerInput" onChange={handleChange} value={text}/>
-            <button className="headerAdd" onClick={handleClick}>+</button>
+    return <div className="header">
+        <h1 className="title">TODOS</h1>
+        <div className="create">
+            <input className="create-input" onChange={handleChange} value={text}/>
+            <button className="create-btn-add" onClick={handleClick}>+</button>
         </div>
     </div>
 }

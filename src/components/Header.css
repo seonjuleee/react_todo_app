@@ -1,18 +1,22 @@
-.headerTitle {
+.header {
+    margin: auto;
+}
+
+.title {
     text-align: center;
     font-size: 70px;
     margin: 0;
     margin-top: 50px;
 }
 
-.headerCreate {
+.create {
     width: 550px;
     text-align: center;
-    margin: 20px 0;
+    margin: 20px auto;
 }
 
-.headerInput {
-    font-size: 25px;
+.create-input {
+    font-size: 20px;
     width: 80%;
     border: none;
     padding: 10px;
@@ -21,12 +25,12 @@
     margin-right: 10px;
 }
 
-.headerInput:focus {
+.create-input:focus {
     outline: none;
     background-color: #D6DBDF;
 }
 
-.headerAdd {
+.create-btn-add {
     border: none;
     background-color: #34495E;
     font-size: 20px;
@@ -37,10 +41,10 @@
     color: white;
 }
 
-.headerAdd:focus {
+.create-btn-add:focus {
     outline: none;
 }
 
-.headerAdd:active {
+.create-btn-add:active {
     background-color: #798da3;
 }

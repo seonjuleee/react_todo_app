@@ -1,0 +1,92 @@
+.contents {
+    margin: auto;
+    width: 510px;
+}
+
+.nav {
+    padding: 0 10px;
+}
+
+/* 
+1. #EBEDEF
+2. #D6DBDF
+3. #AEB6BF
+4. #85929E
+5. #5D6D7E
+6. #34495E
+*/
+
+
+.nav button {
+    margin: 7px 5px 0 0;
+    border: none ;
+    border-radius: 7px 7px 0 0;
+    background-color: #EBEDEF;
+    height: 25px;
+    font-size: 17px;
+    padding-bottom: 0;
+}
+
+.nav button:focus {
+    outline: none;
+}
+
+.nav .invalid:active, .nav .nav-btn-delete:active {
+    background-color: #D6DBDF;
+}
+
+.nav .valid {
+    background-color: #34495E;
+    color: white;
+}
+
+.nav .nav-btn-delete {
+    margin: 7px 0 0 0;
+    float: right;
+    background-color: #AEB6BF;
+}
+
+.nav .nav-btn-close {
+    margin: 7px 0 0 0;
+    float: right;
+    background-color: rgb(197, 82, 82);
+    color: white;
+}
+
+.nav .nav-btn-close:active {
+    background-color: rgb(158, 65, 65);
+}
+
+.list {
+    background-color: #D6DBDF;
+    min-height: 300px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    padding: 10px 0 15px 0;
+}
+
+.list-item {
+    padding: 5px 10px 0 10px;
+}
+
+.list-item span {
+    font-size: 17px;
+    margin: auto 10px;
+}
+
+.list-item button {
+    width: 26px;
+    font-size: 17px;
+    border: none;
+    background-color: #D6DBDF;
+    text-align: center;
+    color: rgb(197, 82, 82);
+}
+
+.list-item button:active {
+    outline: none;
+}
+
+.list-item .hide, .list-item .hide {
+    display: none;
+}

@@ -1,7 +1,6 @@
 import React from 'react';
-import TodoItem from './TodoItem'
-
-function TodoList({todos, nav, onDelete, onToggle}) {
+import TodoItem from './TodoItem';
+function TodoList({todos, nav, displayDeleteToggle, onDelete, onToggle, styledList}) {
 
     let navCompleted;
 
@@ -11,14 +10,14 @@ function TodoList({todos, nav, onDelete, onToggle}) {
         navCompleted = true;
     }
 
-    console.log(nav);
-    return <div>
+    return <div className="list">
         {(todos.filter(todoo => (
             nav === "All" ? true : todoo.completed === navCompleted
             ))).map(todo => (
             <TodoItem
                 todo={todo} 
                 key={todo.id} 
+                displayDeleteToggle={displayDeleteToggle}
                 onDelete={onDelete} 
                 onToggle={onToggle}
             />
